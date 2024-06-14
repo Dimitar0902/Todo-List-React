@@ -1,7 +1,7 @@
 import React from 'react';
 import { Drawer, List, ListItem, ListItemText } from '@mui/material';
 import { Link } from 'react-router-dom';
-import '../component styles/navbar.css'; // Adjusted import path
+import '../component styles/navbar.css'; 
 
 const Navbar = () => {
   return (
@@ -13,7 +13,6 @@ const Navbar = () => {
         <ListItem button component={Link} to="/todos">
           <ListItemText primary="Todos" />
         </ListItem>
-        {/* Add more menu items as needed */}
       </List>
     </Drawer>
   );
