@@ -1,0 +1,16 @@
+.sidebar {
+  width: 20%;
+}
+
+.sidebar .MuiDrawer-paper {
+  width: 20%;
+  background-color: blueviolet; 
+}
+
+.sidebar .MuiListItem-root {
+  color: white; 
+}
+
+.sidebar .MuiListItem-root:hover {
+  background-color: blueviolet; 
+}

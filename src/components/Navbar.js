@@ -1,16 +1,21 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Button } from '@mui/material';
+import { Drawer, List, ListItem, ListItemText } from '@mui/material';
 import { Link } from 'react-router-dom';
+import '../component styles/navbar.css'; // Adjusted import path
 
 const Navbar = () => {
   return (
-    <AppBar position="static">
-      <Toolbar>
-        <Typography variant="h6">TODO App</Typography>
-        <Button color="inherit" component={Link} to="/">Home</Button>
-        <Button color="inherit" component={Link} to="/todos">Todos</Button>
-      </Toolbar>
-    </AppBar>
+    <Drawer variant="permanent" anchor="left" className="sidebar">
+      <List>
+        <ListItem button component={Link} to="/">
+          <ListItemText primary="Home" />
+        </ListItem>
+        <ListItem button component={Link} to="/todos">
+          <ListItemText primary="Todos" />
+        </ListItem>
+        {/* Add more menu items as needed */}
+      </List>
+    </Drawer>
   );
 };
 

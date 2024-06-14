@@ -1,3 +1,10 @@
+html{
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  margin-left: 3.5em;
+}
+
 .App {
   text-align: center;
 }

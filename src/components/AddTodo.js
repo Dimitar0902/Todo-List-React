@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useGlobalState, useSetGlobalState } from '../GlobalState';
 import { Button, TextField } from '@mui/material';
+import '../component styles/AddTodo.css'; 
 
 const AddTodo = () => {
   const [newTodo, setNewTodo] = useState('');
@@ -13,13 +14,16 @@ const AddTodo = () => {
   };
 
   return (
-    <div>
+    <div className='add-todo-div'>
+    <h1 className='todo-title'>Todo List</h1>
+    <div className='add-todo-field'>
       <TextField
         value={newTodo}
         onChange={(e) => setNewTodo(e.target.value)}
         placeholder="Add a new task"
       />
       <Button onClick={addTodo}>Add</Button>
+      </div>
     </div>
   );
 };
